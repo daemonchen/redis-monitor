@@ -16,6 +16,15 @@ html, div, map, dt, isindex, form, header, aside, section, section, article, foo
     display: block;  
 } 
 
+a:link, a:visited {
+color: #77BACE;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
 ul.unstyled, ol.unstyled{ list-style:none; }
 ul.circle{ list-style-type:circle; }
 ul.square{ list-style-type:square; }

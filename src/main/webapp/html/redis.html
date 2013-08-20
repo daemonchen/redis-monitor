@@ -3,10 +3,10 @@
 	<head>
 		<title>home</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link href="/css/kendo/kendo.common.min.css" rel="stylesheet" type="text/css" />
-		<link href="/css/kendo/kendo.default.min.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="/js/kendo/jquery.min.js"></script>
-		<script type="text/javascript" src="/js/kendo/kendo.web.min.js"></script>
+		<link href="/kendo/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+		<link href="/kendo/styles/kendo.bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/kendo/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/kendo/js/kendo.web.min.js"></script>
 		<style type="text/css">
 			html, body {
 				height: 100%;
@@ -21,32 +21,71 @@
 			#herizontal{height: 100%;}
 			#vertical{height: 100%;}
 			#header {
-				background-color:black ;
+				height: 28px;
+				margin-top: 0px;
+				min-width:1000px
+			}
+			
+			.name {
+				float: left;
+				margin: 6px 15px 0 10px;
+			}
+			
+			.menu{
+				width: 450px;
+				float: left;
+				margin: 6px 15px 0 10px;
+			}
+			
+			.menu a{
+				margin-left:15px;
+			}
+			
+			.connect-info{
+				width:250px ;
+				float:right;
+			}
+			.connect-info span {
+				margin-top:5px ;
+			}
+			
+			.connect-info a {
+				margin-top:2px ;
 			}
 		</style>
 		<script type="text/javascript" >
 			$(function(){
 				console.log("start...") ;
-				$("#vertical").kendoSplitter({
+				 /* $("#menu").kendoMenu(); */
+				 
+				/* $("#vertical").kendoSplitter({
                     orientation: "vertical",
                     panes: [
                         { collapsible: false , resizable: false,size:"40px"},
                         { collapsible: false, resizable: false,size: "100%" } 
                     ]
-                });
+                }); 
 				$("#herizontal").kendoSplitter({
                     panes: [
                         { collapsible: false , resizable: false,size:"300px"},
                         { collapsible: false, resizable: false,size: "100%" } 
-                    ]
-                });
+                    ] 
+                });*/
 			}) ;
 		</script>
 	</head>
 	<body>
 		<div id="main">
 			<div id="vertical">
-				<div id="header"></div>
+				<div id="header" class="k-header k-widget">
+				<div style="float:left;width:100%">
+					<div class="name  k-menu">史上最强大的Redis监控 </div>
+						<div class="menu">
+						<a href="#">configuration</a><a href="#">list</a><a href="#">keys</a><a href="#">help</a>
+					</div>
+					<div class="connect-info"><span>192.168.8.168:4367</span><div style="float:right"><a href="#" class="k-button">flushAll</a><a href="#" class="k-button">flushDB</a></div></div>
+					</div>
+				</div>
 				<div id="body">
 					<div id="herizontal">
 						<div></div>
