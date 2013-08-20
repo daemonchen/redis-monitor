@@ -12,7 +12,7 @@
 				height: 100%;
 				margin: 0;
 				padding: 0;
-				background: #F8F8F8;
+				background: #FFFFF8;
 				font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
 				font-size: 12px;
 			}
@@ -21,14 +21,19 @@
 			#herizontal{height: 100%;}
 			#vertical{height: 100%;}
 			#header {
-				height: 28px;
+				height: 35px;
 				margin-top: 0px;
-				min-width:1000px
+				min-width:1000px;
+				background-image: url("/img/bg-header.png");
+				background-repeat: repeat-x; 
 			}
 			
 			.name {
 				float: left;
-				margin: 6px 15px 0 10px;
+				width:100px ;
+				height:28px ;
+				background-image :url("/img/logo.png") ;
+				background-repeat: no-repeat;
 			}
 			
 			.menu{
@@ -77,13 +82,19 @@
 	<body>
 		<div id="main">
 			<div id="vertical">
-				<div id="header" class="k-header k-widget">
+				<div id="header" class="">
 				<div style="float:left;width:100%">
-					<div class="name  k-menu">史上最强大的Redis监控 </div>
+					<div class="name"></div>
 						<div class="menu">
-						<a href="#">configuration</a><a href="#">list</a><a href="#">keys</a><a href="#">help</a>
+						<img src="/img/list.png" alt="" />
+						<img src="/img/config.png" alt="" />
+						<img src="/img/console.png" alt="" />
+						<img src="/img/help.png" alt="" />
 					</div>
-					<div class="connect-info"><span>192.168.8.168:4367</span><div style="float:right"><a href="#" class="k-button">flushAll</a><a href="#" class="k-button">flushDB</a></div></div>
+					<div class="connect-info">
+						<img src="/img/connect-info.png" alt="" />
+					</div>
+					
 					</div>
 				</div>
 				<div id="body">
